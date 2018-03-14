@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="adriansicaru.birthdayapp.AddActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <EditText
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/name_edit"
+            android:layout_toLeftOf="@+id/speech_button"
+            android:hint="Name"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/speech_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_mic_white_24dp"/>
+
+        <TextView
+            android:paddingTop="16dp"
+            android:id="@+id/birthday_title"
+            android:paddingLeft="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/name_edit"
+            android:text="Birthday:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <DatePicker
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthday_title"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/speech_calendar_button"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/speech_calendar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/datePicker"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_mic_white_24dp"/>
+
+        <Button
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:layout_above="@+id/add_cal_btn"
+            android:text="Add birthday"
+            android:id="@+id/add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="16dp"
+            android:layout_alignParentBottom="true"
+            android:text="Add birthday\nand Calendar"
+            android:id="@+id/add_cal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
